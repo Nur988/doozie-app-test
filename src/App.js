@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import './firebase.js'
+import { gettoken } from './firebase.js';
 
 function App() {
+  const tok=gettoken();
+  console.log(tok);
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +19,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+       {tok}
         </a>
       </header>
     </div>
